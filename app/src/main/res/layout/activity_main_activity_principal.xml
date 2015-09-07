@@ -29,4 +29,13 @@
         android:layout_toEndOf="@+id/Boton_campus"
         android:layout_marginLeft="52dp"
         android:layout_marginStart="52dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageMap"
+        android:src="@drawable/google_maps"
+        android:layout_alignTop="@+id/imageVideos"
+        android:layout_alignLeft="@+id/Boton_campus"
+        android:layout_alignStart="@+id/Boton_campus" />
 </RelativeLayout>

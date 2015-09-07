@@ -14,6 +14,7 @@ public class MainActivityPrincipal extends AppCompatActivity {
 
         ImageView Btncampus;
         ImageView BtnVideo;
+        ImageView BtnMaps;
 
 
     @Override
@@ -39,6 +40,17 @@ public class MainActivityPrincipal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Activity_three_videos.class);
+                startActivity(intent);
+            }
+        });
+
+
+        BtnMaps =(ImageView) findViewById(R.id.imageMap);
+
+        BtnMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
                 startActivity(intent);
             }
         });
