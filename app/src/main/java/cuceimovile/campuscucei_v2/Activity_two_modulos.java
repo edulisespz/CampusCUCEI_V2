@@ -42,7 +42,7 @@ public class Activity_two_modulos extends AppCompatActivity {
         boton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //action pending
 
             }
         });
