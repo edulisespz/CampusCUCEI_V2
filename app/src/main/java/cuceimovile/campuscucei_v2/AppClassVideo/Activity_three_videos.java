@@ -31,12 +31,14 @@ public class Activity_three_videos extends AppCompatActivity {
         setupModulos();
 
         BtnLink = (Button) findViewById(R.id.buttonLink );
+        videoViewlink = (VideoView) findViewById(R.id.videoViewlink);
 
         BtnLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             playvideo("http://dcc.cucei.udg.mx/videoscuceitur/cucei.mp4");
+            //playvideo("https://ia700401.us.archive.org/19/items/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4");
 
             }
         });
@@ -59,6 +61,8 @@ public class Activity_three_videos extends AppCompatActivity {
     }
 
     public void playvideo(String videopath) {
+
+
         Log.e("entered", "playvideo");
         Log.e("path is", "" + videopath);
         try {
@@ -86,6 +90,12 @@ public class Activity_three_videos extends AppCompatActivity {
             System.out.println("Video Play Error :" + e.getMessage());
         }
 
+        /*
+        Uri vidPath = Uri.parse(videopath);
+
+        videoViewlink.setVideoURI(vidPath);
+        videoViewlink.start();
+        */
     }
 
     @Override
