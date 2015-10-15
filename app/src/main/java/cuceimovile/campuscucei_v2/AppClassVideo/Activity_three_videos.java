@@ -19,6 +19,7 @@ import cuceimovile.campuscucei_v2.R;
 public class Activity_three_videos extends AppCompatActivity {
 
     Button BtnLink;
+    Button BtnLink2;
 
     VideoView videoViewlink;
     MediaController mediaController;
@@ -31,6 +32,9 @@ public class Activity_three_videos extends AppCompatActivity {
         setupModulos();
 
         BtnLink = (Button) findViewById(R.id.buttonLink );
+        BtnLink2= (Button) findViewById(R.id.buttonLink2);
+
+
         videoViewlink = (VideoView) findViewById(R.id.videoViewlink);
 
         BtnLink.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +44,13 @@ public class Activity_three_videos extends AppCompatActivity {
             playvideo("http://dcc.cucei.udg.mx/videoscuceitur/cucei.mp4");
             //playvideo("https://ia700401.us.archive.org/19/items/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4");
 
+            }
+        });
+
+        BtnLink2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                playvideo("http://dcc.cucei.udg.mx/videoscuceitur/cucei2.mp4");
             }
         });
 

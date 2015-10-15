@@ -38,4 +38,14 @@
         android:layout_alignTop="@+id/imageVideos"
         android:layout_alignLeft="@+id/Boton_campus"
         android:layout_alignStart="@+id/Boton_campus" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageAugReal"
+        android:src="@drawable/augmented_arrows"
+        android:layout_above="@+id/imageVideos"
+        android:layout_alignLeft="@+id/imageVideos"
+        android:layout_alignStart="@+id/imageVideos" />
+
 </RelativeLayout>

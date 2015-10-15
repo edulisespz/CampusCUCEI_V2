@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import cuceimovile.campuscucei_v2.AndroidAR.activity.Demo;
 import cuceimovile.campuscucei_v2.AppClassVideo.Activity_three_videos;
 
 public class MainActivityPrincipal extends AppCompatActivity {
@@ -15,6 +16,7 @@ public class MainActivityPrincipal extends AppCompatActivity {
         ImageView Btncampus;
         ImageView BtnVideo;
         ImageView BtnMaps;
+        ImageView BtnAugAR;
 
 
     @Override
@@ -51,6 +53,17 @@ public class MainActivityPrincipal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        BtnAugAR= (ImageView) findViewById(R.id.imageAugReal);
+
+        BtnAugAR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Demo.class);
                 startActivity(intent);
             }
         });
