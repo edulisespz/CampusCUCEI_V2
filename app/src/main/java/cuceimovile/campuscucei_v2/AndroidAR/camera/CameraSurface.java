@@ -156,12 +156,12 @@ public class CameraSurface extends SurfaceView implements SurfaceHolder.Callback
                 // size.
                 // In this case, we use the default values: 480x320
                 if ((bestw == 0) || (besth == 0)) {
-                    bestw = 480;
-                    besth = 320;
+                    bestw = 540; // bestw = 480;
+                    besth = 960; // besth = 320;
                 }
                 parameters.setPreviewSize(bestw, besth);
             } catch (Exception ex) {
-                parameters.setPreviewSize(480, 320);
+                parameters.setPreviewSize(540, 960);// bestw = 480;  besth = 320;
             }
 
             camera.setParameters(parameters);

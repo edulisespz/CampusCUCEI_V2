@@ -4,4 +4,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_maps">MapCUCEI</string>
+    <string name="title_activity_view_modulos">viewModulos</string>
+    <string name="title_activity_modulos_view">ModulosView</string>
 </resources>
