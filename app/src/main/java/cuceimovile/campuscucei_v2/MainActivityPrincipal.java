@@ -3,6 +3,7 @@ package cuceimovile.campuscucei_v2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -53,6 +54,7 @@ public class MainActivityPrincipal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+                Log.e("entered", "Maps");
                 startActivity(intent);
             }
         });
@@ -64,9 +66,12 @@ public class MainActivityPrincipal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Demo.class);
+                Log.e("entered", "AR");
                 startActivity(intent);
             }
         });
+
+
 
     }
 

@@ -56,6 +56,8 @@ public class Demo extends AugmentedReality {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Log.e("entered", "AR");
+
         // Create toast
         myToast = new Toast(getApplicationContext());
         myToast.setGravity(Gravity.CENTER, 0, 0);
