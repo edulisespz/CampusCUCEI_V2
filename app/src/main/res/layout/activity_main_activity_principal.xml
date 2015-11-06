@@ -10,7 +10,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/Boton_campus"
-        android:src="@drawable/courthouse"
+        android:src="@drawable/modulos_menu"
         android:layout_marginLeft="46dp"
         android:layout_marginStart="46dp"
         android:clickable="true"
@@ -44,7 +44,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageAugReal"
-        android:src="@drawable/augmented_arrows"
+        android:src="@drawable/realidad_aumentada"
         android:layout_above="@+id/imageVideos"
         android:layout_alignLeft="@+id/imageVideos"
         android:layout_alignStart="@+id/imageVideos" />

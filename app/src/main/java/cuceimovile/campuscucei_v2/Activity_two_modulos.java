@@ -39,7 +39,7 @@ public class Activity_two_modulos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two_modulos);
 
-
+        setTitle("Modulos");
 
 
         loadListView();
@@ -81,14 +81,6 @@ public class Activity_two_modulos extends AppCompatActivity {
 
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main_activity_principal, menu);
-
-
-        return true;
-    }
 
 
 

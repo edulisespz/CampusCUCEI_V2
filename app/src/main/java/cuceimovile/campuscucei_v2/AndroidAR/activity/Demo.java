@@ -76,10 +76,14 @@ public class Demo extends AugmentedReality {
         LocalDataSource localData = new LocalDataSource(this.getResources());
         ARData.addMarkers(localData.getMarkers());
 
+
+        /*
         NetworkDataSource wikipedia = new WikipediaDataSource(this.getResources());
         sources.put("wiki", wikipedia);
         NetworkDataSource googlePlaces = new GooglePlacesDataSource(this.getResources());
         sources.put("googlePlaces", googlePlaces);
+
+        */
     }
 
     /**
