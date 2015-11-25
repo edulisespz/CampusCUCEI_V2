@@ -92,3 +92,4 @@ public class MainActivityPrincipal extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+

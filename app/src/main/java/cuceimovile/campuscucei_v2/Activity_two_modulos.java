@@ -3,6 +3,7 @@ package cuceimovile.campuscucei_v2;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -12,17 +13,20 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.MediaController;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Random;
 
 import cuceimovile.campuscucei_v2.AndroidAR.activity.Demo;
 
@@ -32,7 +36,7 @@ public class Activity_two_modulos extends AppCompatActivity {
 
 
     Context context;
-
+    int select;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +45,45 @@ public class Activity_two_modulos extends AppCompatActivity {
 
         setTitle("Modulos");
 
+        setImage();
 
         loadListView();
         RegisterClic();
 
 
+
+
+
     }
 
+    private void setImage(){
+       Random Ran = new Random();
+
+
+
+        RelativeLayout layout= (RelativeLayout)findViewById(R.id.activity_two_layout);
+
+
+
+        select= Ran.nextInt(3);
+        Log.e("entered", Integer.toString(select ) );
+        switch (select){
+            case 0:
+
+                layout.setBackgroundResource(R.drawable.alberca);
+                break;
+            case 1:
+                layout.setBackgroundResource(R.drawable.quimicas);
+                break;
+            case 2:
+                layout.setBackgroundResource(R.drawable.rectoria);
+
+                break;
+
+        }
+
+
+    }
 
 
     public void loadListView(){
@@ -55,9 +91,35 @@ public class Activity_two_modulos extends AppCompatActivity {
                 ,"Modulo K","Modulo L","Modulo M","Modulo N","Modulo O","Modulo Otro","Modulo P"
                 ,"Modulo Q","Modulo R","Modulo S","Modulo T","Modulo U","Modulo V","Modulo W","Modulo X","Modulo Z"};
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.modulos_list_item,listaMod);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.modulos_list_item,listaMod){
+
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+
+                View view = super.getView(position, convertView, parent);
+                TextView text = (TextView) view.findViewById(R.id.activity_two_list_items);
+
+                switch (select){
+                    case 0:
+                        text.setTextColor(Color.parseColor("#e3d35a"));
+                        break;
+                    case 1:
+                        text.setTextColor(Color.parseColor("#F7931E"));
+                        break;
+                    case 2:
+                        text.setTextColor(Color.WHITE);
+                        break;
+
+                }
+
+                return view;
+            }
+        };
 
         ListView lista= (ListView) findViewById(R.id.listViewModulos);
+
+
+
 
         lista.setAdapter(adapter);
     }
@@ -67,7 +129,7 @@ public class Activity_two_modulos extends AppCompatActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                TextView text = (TextView) view;
+
 
                 //selectModulo( position );// Position starts in 0
 
