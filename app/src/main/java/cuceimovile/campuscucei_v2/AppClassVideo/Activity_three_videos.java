@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
@@ -18,8 +19,8 @@ import cuceimovile.campuscucei_v2.R;
 
 public class Activity_three_videos extends AppCompatActivity {
 
-    Button BtnLink;
-    Button BtnLink2;
+    ImageView BtnLink;
+    ImageView BtnLink2;
 
     VideoView videoViewlink;
     MediaController mediaController;
@@ -31,8 +32,8 @@ public class Activity_three_videos extends AppCompatActivity {
         setContentView(R.layout.activity_three_videos);
         setupModulos();
 
-        BtnLink = (Button) findViewById(R.id.buttonLink );
-        BtnLink2= (Button) findViewById(R.id.buttonLink2);
+        BtnLink = (ImageView) findViewById(R.id.imageView );
+        BtnLink2= (ImageView) findViewById(R.id.imageView2);
 
 
         videoViewlink = (VideoView) findViewById(R.id.videoViewlink);
@@ -42,7 +43,6 @@ public class Activity_three_videos extends AppCompatActivity {
             public void onClick(View v) {
 
             playvideo("http://dcc.cucei.udg.mx/videoscuceitur/cucei.mp4");
-            //playvideo("https://ia700401.us.archive.org/19/items/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4");
 
             }
         });
